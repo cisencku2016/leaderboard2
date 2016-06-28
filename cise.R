@@ -201,15 +201,7 @@ if(tempi!=clusterNum){
         }
     }
  }
-b2ans=NULL
-banum=1
-for(i in 1 : length(TDP)){
-   if(clust[i]!=clusterNum){
-       b2ans[banum]=clust[i]
-       banum=banum+1;        
-   }
-}
  write.table(max(cellularity),"subchallenge1A.txt",row.names=F,col.names=F,quote=F,sep="\t")
  write.table(cbind(1:clusterNum,countNum,cellularity),"subchallenge1C.txt",row.names=F,col.names=F,quote=F,sep="\t")
  write.table(clusterNum-1,"subchallenge1B.txt",row.names=F,col.names=F,quote=F,sep="\t")
- write.table(b2ans,"subchallenge2A.txt",row.names=F,col.names=F,quote=F,sep="\t")
+ write.table(clust,"subchallenge2A.txt",row.names=F,col.names=F,quote=F,sep="\t")
